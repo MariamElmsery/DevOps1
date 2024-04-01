@@ -2,11 +2,11 @@ name: cowsay1
 
 on: 
     push:
-        
+
     workflow_dispatch:
 
 jobs:
-  first_job:
+  dragon_job:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -17,6 +17,9 @@ jobs:
 
       - name: Execute cowsay CMD
         run: cowsay -f dragon "Run for cover, iam Chicken....BakBaaaaK" >> chicken.txt
+
+      - name: read dragon
+        run: cat dragon.txt
 
       - name: upload artifact
         uses: actions/upload-artifact@v3
