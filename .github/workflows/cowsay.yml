@@ -19,7 +19,7 @@ jobs:
         run: cowsay -f dragon "Run for cover, iam Chicken....BakBaaaaK" >> chicken.txt
 
       - name: read dragon
-        run: cat dragon.txt
+        run: cat chicken.txt
 
       - name: upload artifact
         uses: actions/upload-artifact@v3
